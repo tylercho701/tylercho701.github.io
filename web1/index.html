@@ -54,11 +54,54 @@
 
     /* 위치 속성 */
     /* opsition : static | relative | absolute | fixed */
+        .container { clear: both; width: 100%; }
+        .hd { clear:both; width: 100%; }
+        .tnb { clear: both; width: 100%; height: 30px; background-color: crimson; }
+        .tnb_wrap { clear: both; width: 1800px ; margin: 0 auto; height: 20px; }
+        .left_tnb {float: left; }
+        .left_tnb li { float: left; line-height: 35px; }
+        .left_tnb li a:first-child::after { content: "|"; color: #fff; margin-left: 10px; }
+        .left_tnb li a { margin-right: 10px; }
+        .left_tnb li a:hover {color: gold; }
+        .right_tnb {float: right; }
+        .right_tnb li {float: left; line-height: 35px; }
+        .right_tnb li a {margin-left: 10px; }
+        .tnb ul li a { color: #fff; font-size: 0.9em; }
+        .gnb { clear:both; width: 100%; height: 80px; background-color: #fff; border-bottom: 1px solid slategray; }
 
     </style>
 </head>
 <body>
-    <h1>농심</h1>
-    <a href="https://tylercho701.github.io">메인</a>
+<div class="container">
+    <header class="hd">
+        <nav class="tnb">
+            <div class="tnb_wrap">
+                <ul class="left_tnb">
+                    <li><a href="https://tylercho701.github.io">개발자 프로젝트입니다</a></li>
+                    <li><a href="">온리원 농심</a></li>
+                </ul>
+                <ul class="right_tnb">
+                    <li><a href="" class="sns1">SNS1</a></li>
+                    <li><a href="" class="sns2">SNS2</a></li>
+                    <li><a href="" class="sns3">SNS3</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav class="gnb">
+            <div class="gnb_wrap">
+
+            </div>
+        </nav>
+    </header>
+    <div class="content">
+
+    </div>
+    <footer class="ft">
+
+    </footer>
+</div>
+
 </body>
+<!-- <h1>농심</h1>
+<a href="https://tylercho701.github.io">메인</a> -->
 </html>
