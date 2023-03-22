@@ -58,16 +58,26 @@
         .hd { clear:both; width: 100%; }
         .tnb { clear: both; width: 100%; height: 30px; background-color: crimson; }
         .tnb_wrap { clear: both; width: 1800px ; margin: 0 auto; height: 20px; }
-        .left_tnb {float: left; }
-        .left_tnb li { float: left; line-height: 35px; }
+        .left_tnb { float: left; }
+        .left_tnb li { float: left; line-height: 30px; }
         .left_tnb li:first-child::after { content: "|"; color: #fff; margin-right: 10px; }
         .left_tnb li a { margin-right: 10px; }
         .left_tnb li a:hover {color: gold; }
         .right_tnb {float: right; }
-        .right_tnb li {float: left; line-height: 35px; }
+        .right_tnb li {float: left; line-height: 30px; }
         .right_tnb li a {margin-left: 10px; }
         .tnb ul li a { color: #fff; font-size: 0.9em; }
-        .gnb { clear:both; width: 100%; height: 80px; background-color: #fff; border-bottom: 1px solid slategray; }
+        .main { clear:both; width: 100%; height: 80px; background-color: #fff; border-bottom: 1px solid slategray; }
+        .main_wrap { clear:both; width: 95%; margin: 0 auto; position: relative; }
+        .logo { display: block; width: 120px; height: 45px; overflow:hidden; position: absolute; top: 10px; left: 0;}
+        .logo img { display: block; width: 100%; height: auto;}
+        .gnb { position: relative;}
+        .gnb > ul { width: 1400px; height: 48px; border: 1px aolid black; margin: 0px auto;}
+        .gnb > ul > li { float: left;}
+        .sitemap_btn { display: block; position: absolute; top: 28px; right: 10px; cursor: pointer;}
+        .sitemap { position: fixed; top: 0; left: 0; width: 100vw; height: 100vw; z-index: auto; background-color: aquamarine; display: none;}
+        #sitemap_ck:checked ~ .sitemap {display: block;}
+        #sitemap_ck {display: none;}
 
     </style>
 </head>
@@ -77,7 +87,7 @@
         <nav class="tnb">
             <div class="tnb_wrap">
                 <ul class="left_tnb">
-                    <li><a href="https://tylercho701.github.io">개발자 프로젝트입니다</a></li>
+                    <li><a href="https://tylercho701.github.io">개발자 연습 미러링입니다</a></li>
                     <li><a href="">온리원 농심</a></li>
                 </ul>
                 <ul class="right_tnb">
@@ -87,11 +97,27 @@
                 </ul>
             </div>
         </nav>
-        <nav class="gnb">
-            <div class="gnb_wrap">
-
+        <div class="main">
+            <div class="main_wrap">
+                <a href="" class="logo"><img src="./images/pop-logo.jpg" alt="">NongShimlogo</a>
+                <nav class="gnb">
+                    <ul class="gnb_fr">
+                        <li><a href="">메뉴1</a></li>
+                        <li><a href="">메뉴2</a></li>
+                        <li><a href="">메뉴3</a></li>
+                        <li><a href="">메뉴4</a></li>
+                        <li><a href="">메뉴5</a></li>
+                    </ul>
+                </nav>
+                <label for="sitemap_ck" class="sitemap_btn">사이트맵</label>
             </div>
-        </nav>
+        </div>
+        <input type="checkbox" id="sitemap_ck">
+        <div class="sitemap">
+            <div class="sitemap_fr">
+                <label for="sitemap_ck" class="close_btn">닫기</label>
+            </div>
+        </div>
     </header>
     <div class="content">
 
