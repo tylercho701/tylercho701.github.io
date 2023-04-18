@@ -112,8 +112,46 @@
 
         .page_title {text-align: center; font-size: 48px; padding-top: 2em; }
 
-        #page1{background-color: #fff; }
-        #page2{background-color: #eee; }
+        #page1{background-color: #fff; color: #333; }
+        
+        #page1 .page_wrap { width: 1280px; }
+        #page1 .tit_box { float: left; }
+        .sub_title{ font-size: 16px; color: orange; font-weight: 100; }
+        .main_title{ font-size: 32px; color: #000; font-weight: 700; float: left; }
+        #page1 .pg1_btn_box{ clear: both; }
+        #page1 .pg1_btn_box label{ display: block; padding: 0.8em;  float: left; border: 1px solid #e1e1e1; border-radius: 36px; margin: 0.5rem; color: #999; cursor: pointer; }
+        #page1 .pg1_btn_box label:hover{ color: #FFF; background-color: crimson; }
+        .pg_ra { display: none; }
+        #page1 .pg_ra:checked + label { color: #fff; background-color: #075d46; }
+        .ban_fr { clear: both; width: 1280px; height: 550px; padding-top: 40px; overflow: hidden; }
+        .ban_fr .ban_box { width: 600%; height: 550px; transition-duration: 0.6s; }
+        .ban_fr .ban_box li { width: 1280px; float: left; height: 550px; }
+        .ban_fr .ban_box li .pic { display: block; width: 840px; height: 550px; float: left; border-radius: 40px; }
+        .ban_fr .ban_box li .ban_tit_box { float: right; width: 400px; height: 550px; position: relative; background-color: #f1f1f1; border-radius: 40px; }
+        .ban_fr .ban_box li .ban_tit_box .ban_tit1 { font-size: 64px; line-height: 3; color: #075d46; margin-left: 50px; }
+        .ban_fr .ban_box li .ban_tit_box .ban_tit2 { position: absolute; left: 50px; bottom: 120px; font-size: 36px; line-height: 2; color: #075d46; }
+        .ban_fr .ban_box li .ban_tit_box .ban_com { position: absolute; bottom: 50px; left: 50px; font-style: 16px; color: #666; }
+
+        #pg1_ra1:checked ~ .ban_fr .ban_box { margin-left: 0; }
+        #pg1_ra2:checked ~ .ban_fr .ban_box { margin-left: -1280px; }
+        #pg1_ra3:checked ~ .ban_fr .ban_box { margin-left: -2560px; }
+        #pg1_ra4:checked ~ .ban_fr .ban_box { margin-left: -3840px; }
+        #pg1_ra5:checked ~ .ban_fr .ban_box { margin-left: -5100px; }
+
+
+        #page2{ background-color: #eee; color: #222; }
+        #page2 .page_wrap { clear: both; padding-top: 80px; }
+        .grid_fr { clear: both; width: 1280px; }
+        .grid_fr .grid_box { clear: both; width: 1280px; padding-left: 300px; }
+        .grid_box li { width: 410px; margin-right: 25px; float: left; height: 624px; }
+        .grid_box li:last-child { margin-right: 0; }
+        .grid_box li a { display: block; color: #fff; background-position: center center; background-repeat: no-repeat; border-radius: 40px; margin-top: 25px; height: 624px; padding-top: 30em; padding-left: 2em; font-style: 30px; box-sizing: border-box; }
+        .grid_box li a.item1 { background-image: url("./images/main1.jpg"); }
+        .grid_box li a.item2 { background-image: url("./images/main2.jpg"); }
+        .grid_box li a.item3 { background-image: url("./images/main_management.png"); }
+        .grid_box li a .grid_tit { line-height: 2; }
+        .grid_box li a .grid_com { font-size: 16px; }
+
         #page3{background-color: darkseagreen; }
         #page4{background-color: #fff; }
         #page5{background-color: #eee; }
@@ -217,7 +255,67 @@
             <h2 class="page_title">한국을 대표하는 맛,
                 세계를 감동시킨 우리의 맛</h2>
             <div class="page_wrap">
-
+                <div class="tit_box">
+                    <h3 class="sub_title">ABOUT</h3>
+                    <h2 class="main_title">NONGSHIM</h2>
+                    <article class="pg1_btn_box">
+                        <input type="radio" name="pg_ra" id="pg1_ra1" class="pg_ra" checked>
+                        <label for="pg1_ra1" class="item1">농심</label>
+                        <input type="radio" name="pg_ra" id="pg1_ra2" class="pg_ra">
+                        <label for="pg1_ra2" class="item2">경영이념</label>
+                        <input type="radio" name="pg_ra" id="pg1_ra3" class="pg_ra">
+                        <label for="pg1_ra3" class="item3">세계속의농심</label>
+                        <input type="radio" name="pg_ra" id="pg1_ra4" class="pg_ra">
+                        <label for="pg1_ra4" class="item4">농심그룹</label>
+                        <input type="radio" name="pg_ra" id="pg1_ra5" class="pg_ra">
+                        <label for="pg1_ra5" class="item5">CI소개</label>
+                        <div class="ban_fr">
+                            <ul class="ban_box">
+                                <li class="item1">
+                                    <img src="./images/overview_management_01.png" alt="" class="pic">
+                                    <div class="ban_tit_box">
+                                        <h2 class="ban_tit1"></h2>
+                                        <h2 class="ban_tit2"></h2>
+                                        <p class="ban_com"></p>
+                                    </div>
+                                </li>
+                                <li class="item2">
+                                    <img src="./images/overview_management_02.png" alt="" class="pic">
+                                    <div class="ban_tit_box">
+                                        <h2 class="ban_tit1"></h2>
+                                        <h2 class="ban_tit2"></h2>
+                                        <p class="ban_com"></p>
+                                    </div>
+                                </li>
+                                <li class="item3">
+                                    <img src="./images/overview_management_03.png" alt="" class="pic">
+                                    <div class="ban_tit_box">
+                                        <h2 class="ban_tit1"></h2>
+                                        <h2 class="ban_tit2"></h2>
+                                        <p class="ban_com"></p>
+                                    </div>
+                                </li>
+                                <li class="item4">
+                                    <img src="./images/overview_management_05.png" alt="" class="pic">
+                                    <div class="ban_tit_box">
+                                        <h2 class="ban_tit1"></h2>
+                                        <h2 class="ban_tit2"></h2>
+                                        <p class="ban_com"></p>
+                                    </div>
+                                </li>
+                                <li class="item5">
+                                    <img src="./images/overview_management_01.png" alt="" class="pic">
+                                    <div class="ban_tit_box">
+                                        <h2 class="ban_tit1"></h2>
+                                        <h2 class="ban_tit2"></h2>
+                                        <p class="ban_com"></p>
+                                    </div>
+                                </li>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
         <section class="page" id="page2">
@@ -226,16 +324,38 @@
             <div class="page_wrap">
 
             </div>
+            <article class="grid_fr">
+                <ul class="grid_box">
+                    <li>
+                        <a href="" class="item1">
+                            <h3 class="grid_tit">사회공헌</h3>
+                            <p class="grid_com">작은 사랑의 실천</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="item2">
+                            <h3 class="grid_tit">환경과 안전</h3>
+                            <p class="grid_com">안전한 제조공정, 식품의 생산</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="item3">
+                            <h3 class="grid_tit">소비자 중심 경영</h3>
+                            <p class="grid_com">소비자를 중심으로 한 구성</p>
+                        </a>
+                    </li>
+                </ul>
+            </article>
         </section>
         <section class="page" id="page3">
-            <h2 class="page_title">국경을 뛰어넘는 농심의 맛</h2>
+            <h2 class="page_title">투자의 블루칩 농심
+                농심의 주가정보를 상세하게 전달해 드립니다.</h2>
             <div class="page_wrap">
 
             </div>
         </section>
         <section class="page" id="page4">
-            <h2 class="page_title">투자의 블루칩 농심
-                농심의 주가정보를 상세하게 전달해 드립니다.</h2>
+            <h2 class="page_title">국경을 뛰어넘는 농심의 맛</h2>
             <div class="page_wrap">
 
             </div>
