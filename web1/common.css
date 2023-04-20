@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/* font-family : "1차 폰트명", "2차 폰트명", 3차 폰트명;}
+3차 폰트는 기본 폰트를 적용함
+기본 폰트 : 브라우저에서 기본 제공
+sans-serif(고딕), serif(명조), cursive(궁서), monospace(가로세로비율1:1) 등
+*/
+* { margin: 0; padding: 0; }    /* 바깥 여백, 안 여백 */
+/* 한 속성에 여러 값이 들어가게 되면 기재 순서대로 시계 방향 */
+/* 인라인 방식 태그는 좌우 여백만 조절 가능, 상하는 불가 (블록 방식은 상하좌우 조절 가능) */
+body { width: 100%; font-family: 'Noto Sans KR', sans-serif; overflow-x: hidden; }
+ul { list-style: none; }
+a { text-decoration: none; }
+img { border: none; }
+/* 위 스타일 설정은 기본 설정 */
+/* 속성 설정은 통합 -> 세부 순서로 기술 */
+/* 박스 사이즈
+box-sizing : content-box | padding-box | border-box
+설정하지 않으면 content-box가 기본값, 그 밖에 border-box를 사용함
+content-box 크기 : 크기 + 패딩 + 보더 + 마진
+border-box 크기 : 크기 + 마진 */
+
+/* 위치 속성 */
+/* opsition : static | relative | absolute | fixed */
+.container { clear: both; width: 100%; }
+.hd { clear:both; width: 100%; }
+
+
+/* Footer */
+#ft { clear:both;  }
+.ft .row { clear:both; padding-top: 25px; padding-bottom: 25px; min-height:60px; }
+.ft .row1 { background-color:crimson;  }
+.ft .fnb li { float:left; margin-right: 50px; line-height: 60px; }
+.ft .fnb li a { color:#fff; font-size: 18px; }
+.ft .fnb li a:hover { color:gold; }
+.ft #favo { display:block; float:right; line-height: 60px; height: 60px; width: 200px; text-align: center;
+font-size: 18px;  }
+
+.ft .row2 { background-color: #f1f1f1; height: 224px; }
+.ft .slogan { font-size: 24px; color:#a0a0a0; margin-top: 12px; }
+.ft .ft_link_fr dl { float:left; font-size:16px; line-height: 32px; padding-left: 28px; }
+.ft .ft_link_fr dl a { color:#a0a0a0; }
+.ft .ft_link_fr dl a:hover { color:#333; }
+
+.ft .row3 { background-color: #fff; }
+.ft .ft_logo { width: 125px; height: 45px; background-image: url("./images/pop-logo.jpg"); 
+background-size:125px auto; }
+.ft .copyright { height: 45px; font-style: normal; font-weight:100;
+color:#a0a0a0; }
+
+.ft_wrap { clear:both; width: 1280px; margin: 0 auto; }
+.ft_wrap .left { float: left; }
+.ft_wrap .right { float: right; }
+
+
+.fix_area { position:fixed; z-index:9999; bottom:40px; right:40px; }
+.fix_area .cir_box { display:block; width: 60px; height: 60px; text-align:center; border-radius:35px; box-sizing: border-box; padding: 6px; font-size:12px; padding-top:15px; overflow:hidden; box-shadow:1px 1px 6px #333; }
+.fix_area .counsel { background-color:rgba(255,255,255,0.75); color:#333; }
+.fix_area .totop { background-color:crimson; color:#fff; margin-top: 20px; }

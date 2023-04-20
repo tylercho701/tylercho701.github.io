@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>포트폴리오 - 농심</title>
 
     <!-- 검색 엔진 초기화 -->
@@ -31,215 +32,11 @@
         <!-- reset.css나 normalize.css를 cdn 또는 다운로드 받아 link 로 연결 -->
         <!-- <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet"> -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" rel="stylesheet">
+        <link rel="stylesheet" href="common.css">
+        <link rel="stylesheet" href="main.css">
     <style>
-        /* font-family : "1차 폰트명", "2차 폰트명", 3차 폰트명;}
-        3차 폰트는 기본 폰트를 적용함
-        기본 폰트 : 브라우저에서 기본 제공
-        sans-serif(고딕), serif(명조), cursive(궁서), monospace(가로세로비율1:1) 등
-        */
-        * { margin: 0; padding: 0; }    /* 바깥 여백, 안 여백 */
-        /* 한 속성에 여러 값이 들어가게 되면 기재 순서대로 시계 방향 */
-        /* 인라인 방식 태그는 좌우 여백만 조절 가능, 상하는 불가 (블록 방식은 상하좌우 조절 가능) */
-        body { width: 100%; font-family: 'Noto Sans KR', sans-serif; overflow-x: hidden; }
-        ul { list-style: none; }
-        a { text-decoration: none; }
-        img { border: none; }
-        /* 위 스타일 설정은 기본 설정 */
-        /* 속성 설정은 통합 -> 세부 순서로 기술 */
-        /* 박스 사이즈
-        box-sizing : content-box | padding-box | border-box
-        설정하지 않으면 content-box가 기본값, 그 밖에 border-box를 사용함
-        content-box 크기 : 크기 + 패딩 + 보더 + 마진
-        border-box 크기 : 크기 + 마진 */
 
-        /* 위치 속성 */
-        /* opsition : static | relative | absolute | fixed */
-        .container { clear: both; width: 100%; }
-        .hd { clear:both; width: 100%; }
-
-        .tnb { clear: both; width: 100%; height: 30px; background-color: crimson; }
-        .tnb_wrap { clear: both; width: 1800px ; margin: 0 auto; height: 20px; }
-
-        .right_tnb li a.sns1 { background-position:-67px -67px; }
-        .right_tnb li a.sns2 { background-position:-7px -67px; }
-        .right_tnb li a.sns3 { background-position:-36px -67px; }
-
-        .left_tnb { float: left; }
-        .left_tnb li { float: left; line-height: 30px; }
-        .left_tnb li:first-child::after { content: "|"; color: #fff; margin-right: 10px; }
-        .left_tnb li a { margin-right: 10px; }
-        .left_tnb li a:hover {color: gold; }
-
-        .right_tnb {float: right; }
-        .right_tnb li {float: left; line-height: 30px; }
-        .right_tnb li a { margin-left: 14px; display:block; width:30px; height:30px; text-indent:9999px; overflow: hidden; background-image: url("./images/icons.png"); margin-top: 10px; background-size:300px 700px; }
-
-        .tnb ul li a { color: #fff; font-size: 0.9em; }
-
-        .main { clear:both; width: 100%; height: 80px; background-color: #fff; border-bottom: 1px solid slategray; }
-        .main_wrap { clear:both; width: 95%; margin: 0 auto; position: relative; }
-
-        .logo { display: block; width: 120px; height: 45px; overflow:hidden; position: absolute; top: 10px; left: 0;}
-        .logo img { display: block; width: 100%; height: auto;}
-
-        .gnb { position: relative; margin-top: 10px; }
-        .gnb > ul { width: 800px; height: 48px; margin: 0px auto;}
-        .gnb > ul > li { float: left; width:20%; text-align: center; line-height: 65px; }
-        .gnb > ul > li > a { display: block; font-size: 1.3em; color: black; font-weight: bold; }
-        .gnb > ul > li:hover > a { border-bottom: 1px solid crimson;}
-
-        .sub { display: none; padding-top: 20px; width: 800px; }
-        .sub.item2 {margin-left: -160px; }
-        .sub.item3 {margin-left: -320px; }
-        .sub.item4 {margin-left: -470px; }
-        .sub.item5 {margin-left: -640px; }
-        .gnb > ul > li:hover > .sub { display: block; }
-        .sub > ul > li { float: left; width: 20%; }
-        .sub > ul > li > a { display: block; color: #000; font-style: 1.1em; font-weight: 500; }
-        .sub > ul > li:hover > a { border-bottom: 1px solid crimson; }
-
-        .sitemap_btn { display: block; position: absolute; top: 28px; right: 10px; cursor: pointer; width: 20px; height: 20px; overflow:hidden; text-indent: -9999px; background-image: url("./images/gnb_icon_menu.png"); background-size: 20px 40px; background-position: center -20px; }
-        .sitemap { position: fixed; top: 0; left: 0; width: 100vw; height: 100vw; z-index: 999; background-color: aquamarine; display: none;}
-
-        #sitemap_ck:checked ~ .sitemap {display: block;}
-        #sitemap_ck {display: none;}
-
-        .vs { clear:both; position: relative; width: 100vw; height: calc(100vh - 135px); overflow: hidden; }
-        .vs video { display: block; width: 100%; }
-
-        .page { clear: both; position: relative; width: 100vw; height: 100vh; }
-        .page_wrap { clear: both; width: 1400px; margin: 0 auto; }
-
-        .page_title {text-align: center; font-size: 48px; padding-top: 2em; }
-
-        #page1{background-color: #fff; color: #333; }
-        #page1 .page_wrap { width: 1280px; }
-        #page1 .tit_box { float: left; }
-        .sub_title{ font-size: 16px; color: orange; font-weight: 100; }
-        .main_title{ font-size: 32px; color: #000; font-weight: 700; float: left; }
-        #page1 .pg1_btn_box{ clear: both; }
-        #page1 .pg1_btn_box label{ display: block; padding: 0.8em;  float: left; border: 1px solid #e1e1e1; border-radius: 36px; margin: 0.5rem; color: #999; cursor: pointer; }
-        #page1 .pg1_btn_box label:hover{ color: #FFF; background-color: crimson; }
-        .pg_ra { display: none; }
-        #page1 .pg_ra:checked + label { color: #fff; background-color: #075d46; }
-        .ban_fr { clear: both; width: 1280px; height: 550px; padding-top: 40px; overflow: hidden; }
-        .ban_fr .ban_box { width: 600%; height: 550px; transition-duration: 0.6s; }
-        .ban_fr .ban_box li { width: 1280px; float: left; height: 550px; }
-        .ban_fr .ban_box li .pic { display: block; width: 840px; height: 550px; float: left; border-radius: 40px; }
-        .ban_fr .ban_box li .ban_tit_box { float: right; width: 400px; height: 550px; position: relative; background-color: #f1f1f1; border-radius: 40px; }
-        .ban_fr .ban_box li .ban_tit_box .ban_tit1 { font-size: 64px; line-height: 3; color: #075d46; margin-left: 50px; }
-        .ban_fr .ban_box li .ban_tit_box .ban_tit2 { position: absolute; left: 50px; bottom: 120px; font-size: 36px; line-height: 2; color: #075d46; }
-        .ban_fr .ban_box li .ban_tit_box .ban_com { position: absolute; bottom: 50px; left: 50px; font-style: 16px; color: #666; }
-        #pg1_ra1:checked ~ .ban_fr .ban_box { margin-left: 0; }
-        #pg1_ra2:checked ~ .ban_fr .ban_box { margin-left: -1280px; }
-        #pg1_ra3:checked ~ .ban_fr .ban_box { margin-left: -2560px; }
-        #pg1_ra4:checked ~ .ban_fr .ban_box { margin-left: -3840px; }
-        #pg1_ra5:checked ~ .ban_fr .ban_box { margin-left: -5100px; }
-
-
-        #page2{ background-color: #eee; color: #333; }
-        #page2 .page_wrap { clear: both; padding-top: 80px; }
-        .grid_fr { clear: both; width: 1280px; }
-        .grid_fr .grid_box { clear: both; width: 1280px; padding-left: 40px; }
-        .grid_box li { width: 410px; margin-right: 25px; float: left; height: 624px; }
-        .grid_box li:last-child { margin-right: 0; }
-        .grid_box li a { display: block; color: #fff; background-position: center center; background-repeat: no-repeat; border-radius: 40px; margin-top: 25px; height: 624px; padding-top: 30em; padding-left: 2em; font-style: 30px; box-sizing: border-box; }
-        .grid_box li a.item1 { background-image: url("./images/main1.jpg"); }
-        .grid_box li a.item2 { background-image: url("./images/main2.jpg"); }
-        .grid_box li a.item3 { background-image: url("./images/main_management.png"); }
-        .grid_box li a .grid_tit { line-height: 2; }
-        .grid_box li a .grid_com { font-size: 16px; }
-
-
-        #page3{background-color: darkseagreen; color: #fff; }
-        #page3 .page_wrap { width: 1280px; padding-top:80px; }
-        .col_fr { clear:both; width: 1280px; padding-top: 40px; }
-        .col_fr .col_box { clear: both; width: 1280px; }
-        .col_fr .col_box li.left { float:left; width: 844px; height: 458px; 
-        background-color:#fff; color:#000; border-radius:25px; box-sizing: border-box; padding:38px; }
-        .one_line { font-size:28px; line-height: 2; padding-bottom:18px; }    
-        .inv_p { clear:both; }
-        .large_txt { float:left; font-size:70px; padding-right: 40px; }
-        .small_txt { float:left; font-size:18px; padding-top: 14px; line-height: 1.8; }
-        .col_dl { clear:both; padding-top:30px;  }
-        .col_dl dd { width:250px; float:left; margin:20px 0px; font-size:22px; font-weight:100; 
-        line-height: 1.6; }
-        .col_dl dd .d_tit { font-weight: 200; color:#999; }
-        .col_dl dd .d_com { font-weight: 100; }
-        .gtxt { color:#37e3b5; padding-left: 24px; }
-        .ltxt { color:#999; }
-        .col_fr .col_box li.right { float:right; width: 410px; height: 458px; }
-        .col_fr .col_box li.right a { display:block; background-color: #fff; color:#333; height: 135px; line-height: 135px;  margin-bottom: 26px; border-radius:25px;   }
-        .col_fr .col_box li.right a span { padding-left: 20px; }
-        .col_fr .col_box li.right a:after { content:""; display:block; width: 28px; height: 35px; 
-        background-image: url("./images/icons.png"); background-repeat: no-repeat; 
-        background-position: -495px -72px; float:right; margin-top:50px; margin-right:20px; }
-        .col_fr .col_box li.right a span:before { content:""; display:block; float:left; width:79px; height:76px; background-image:url("./images/icons.png"); background-repeat: no-repeat;background-position:0px -682px; margin-top: 30px; margin-left: 20px; } 
-
-
-        #page4{background-color: #fff; color: #333; }
-        #page4 .tit_box { clear: both; padding-top: 80px; width: 1280px; margin: 0 auto; }
-        .more { display: block; position: absolute; top: 60px; right: 300px; font-size: 68px; font-weight: bold; width: 80px; height: 80px; margin: 100px auto; padding-top: 40px; }
-        .board_fr {clear: both; width: 1280px; margin: 0px auto; padding-top: 40px;}
-        .tb1 { clear: both; border-collapse: collapse; }
-        .tb1 tr { width: 1280px; }
-        .tb1 td { min-height: 50px; padding-top: 20px; padding-bottom: 20px; border-top: 1px solid #ccc; }
-        .tb1 td.td1 { width: 50px; font-size: 30px; }
-        .tb1 td a { display: block; color: #333; transition-duration: 0.4s;}
-
-
-        #page5{background-color: #eee; color: #333;}
-        #page5 .tit_box { clear:both; padding-top: 80px; }
-        .colm_fr { clear:both; }
-        .colm_fr .lst_tit {clear:both; padding-top: 30px; font-size: 28px; font-weight: 100; line-height: 2; }
-        .lst1, .lst2 { clear:both; }
-        .lst1 li, .lst2 li { float: left; width: 410px; margin-right: 25px; height: 250px; background-color: #fff; border-radius: 25px; box-sizing: border-box; padding-left: 40px; padding-top: 60px;}
-        .lst1 li:last-child, .lst2 li:last-child { margin-right: 0; }
-        .colm_fr ul .item_tit { font-style: 32px; line-height: 2.8; color: #333; }
-        .colm_fr ul li:before { content: ""; display: block; width: 60px; height: 60px; background-image: url("./images/icons.png"); background-repeat: no-repeat; background-size: 300px auto; }
-        .colm_fr ul li a { display: block; width: 150px; line-height: 30px; padding-left: 18px; background-color: crimson; color: #fff; border-radius: 25px; }
-        .colm_fr ul li a:after { content: "→"; padding-left: 60px; }
-        .colm_fr .lst1 .item1:before { background-position: 0px -400px; }
-        .colm_fr .lst1 .item2:before { background-position: -60px -400px; }
-        .colm_fr .lst1 .item3:before { background-position: -120px -400px; }
-        .colm_fr .lst2 .item1:before { background-position: -180px -400px; }
-        .colm_fr .lst2 .item2:before { background-position: -240px -400px; }
-        .colm_fr .lst2 .item3:before { background-position: 0px -460px; }
-
-        #ft { clear:both;  }
-        .ft .row { clear:both; padding-top: 25px; padding-bottom: 25px; min-height:60px; }
-        .ft .row1 { background-color:crimson;  }
-        .ft .fnb li { float:left; margin-right: 50px; line-height: 60px; }
-        .ft .fnb li a { color:#fff; font-size: 18px; }
-        .ft .fnb li a:hover { color:gold; }
-        .ft #favo { display:block; line-height: 60px; height: 60px; width: 200px; text-align: center;
-        font-size: 18px;  }
-
-        .ft .row2 { background-color: #f1f1f1; height: 224px; }
-        .ft .slogan { font-size: 24px; color:#a0a0a0; margin-top: 12px; }
-        .ft .ft_link_fr dl { float:left; font-size:16px; line-height: 32px; padding-left: 28px; }
-        .ft .ft_link_fr dl a { color:#a0a0a0; }
-        .ft .ft_link_fr dl a:hover { color:#333; }
-
-        .ft .row3 { background-color: #fff; }
-        .ft .ft_logo { width: 125px; height: 45px; background-image: url("./images/pop-logo.jpg"); 
-        background-size:125px auto; }
-        .ft .copyright { height: 45px; font-style: normal; font-weight:100;
-        color:#a0a0a0; }
-
-        .ft_wrap { clear:both; width: 1280px; margin: 0 auto; }
-        .ft_wrap .left { float: left; }
-        .ft_wrap .right { float: right; }
-
-
-        .fix_area { position:fixed; z-index:9999; bottom:40px; right:40px; }
-        .fix_area .cir_box { display:block; width: 60px; height: 60px; text-align:center; 
-        border-radius:35px; box-sizing: border-box; padding: 6px; font-size:12px; padding-top:15px; 
-        overflow:hidden; box-shadow:1px 1px 6px #333; }
-        .fix_area .counsel { background-color:rgba(255,255,255,0.75); color:#333; }
-        .fix_area .totop { background-color:#075d46; color:#fff; margin-top: 20px; }
-
-    </style>
+</style>
 </head>
 <body>
     <div class="container">
@@ -248,69 +45,70 @@
                 <div class="tnb_wrap">
                     <ul class="left_tnb">
                         <li><a href="https://tylercho701.github.io">개발자 연습 미러링입니다</a></li>
-                        <li><a href="">온리원 농심</a></li>
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="agreement.html">회원가입</a></li>
                     </ul>
                     <ul class="right_tnb">
-                        <li><a href="" class="sns1">SNS1</a></li>
-                        <li><a href="" class="sns2">SNS2</a></li>
-                        <li><a href="" class="sns3">SNS3</a></li>
+                        <li><a href="https://blog.naver.com/nongshimblog" class="sns1">NAVER BLOG</a></li>
+                        <li><a href="https://www.youtube.com/user/nongshimPR" class="sns2">YOUTUBE</a></li>
+                        <li><a href="https://www.instagram.com/nongshim/" class="sns3">INSTAGRAM</a></li>
                     </ul>
                 </div>
             </nav>
             <div class="main">
                 <div class="main_wrap">
-                    <a href="" class="logo"><img src="./images/pop-logo.jpg" alt="">NongShimlogo</a>
+                    <a href="index.html" class="logo"><img src="./images/pop-logo.jpg" alt="">NongShimlogo</a>
                     <nav class="gnb">
                         <ul class="gnb_fr">
-                            <li><a href="">농심소개</a>
+                            <li><a href="sub1.html">농심소개</a>
                                 <div class="sub item1">
                                     <ul class="dp2">
-                                        <li><a href="">농심소개</a></li>
-                                        <li><a href="">경영이념</a></li>
-                                        <li><a href="">연혁</a></li>
-                                        <li><a href="">세계속의 농심</a></li>
-                                        <li><a href="">오시는길</a></li>
+                                        <li><a href="sub1.html#page1">농심소개</a></li>
+                                        <li><a href="sub1.html#page2">경영이념</a></li>
+                                        <li><a href="sub1.html#page3">연혁</a></li>
+                                        <li><a href="sub1.html#page4">세계속의 농심</a></li>
+                                        <li><a href="sub1.html#page5">오시는길</a></li>
                                     </ul>
                                 </div>
                             </li>
-                            <li><a href="">지속가능경영</a>
+                            <li><a href="sub2.html">지속가능경영</a>
                                 <div class="sub item2">
                                     <ul class="dp2">
-                                        <li><a href="">OVERVIEW</a></li>
-                                        <li><a href="">PLANET</a></li>
-                                        <li><a href="">PEOPLE</a></li>
-                                        <li><a href="">PROSPERITY</a></li>
-                                        <li><a href="">지속가능경영보고서</a></li>
+                                        <li><a href="sub2.html#page1">OVERVIEW</a></li>
+                                        <li><a href="sub2.html#page2">PLANET</a></li>
+                                        <li><a href="sub2.html#page3">PEOPLE</a></li>
+                                        <li><a href="sub2.html#page4">PROSPERITY</a></li>
+                                        <li><a href="sub2.html#page5">지속가능경영보고서</a></li>
                                     </ul>
                                 </div>
                             </li>
-                            <li><a href="">홍보센터</a>
+                            <li><a href="sub3.html">홍보센터</a>
                                 <div class="sub item3">
                                     <ul class="dp2">
-                                        <li><a href="">OVERVIEW</a></li>
-                                        <li><a href="">농시미서포트</a></li>
-                                        <li><a href="">농심 소식</a></li>
-                                        <li><a href="">농심 TV</a></li>
-                                        <li><a href="">라면피디아</a></li>
+                                        <li><a href="sub3.html#page1">OVERVIEW</a></li>
+                                        <li><a href="sub3.html#page2">농시미서포트</a></li>
+                                        <li><a href="sub3.html#page3">농심 소식</a></li>
+                                        <li><a href="sub3.html#page4">농심 TV</a></li>
+                                        <li><a href="sub3.html#page5">라면피디아</a></li>
                                     </ul>
                                 </div>
                             </li>
-                            <li><a href="">투자정보</a>
+                            <li><a href="sub4.html">투자정보</a>
                                 <div class="sub item4">
                                     <ul class="dp2">
-                                        <li><a href="">주식에 관한 사항</a></li>
-                                        <li><a href="">주가정보</a></li>
-                                        <li><a href="">IR 정보</a></li>
-                                        <li><a href="">공시정보</a></li>
+                                        <li><a href="sub4.html#page1">주식에 관한 사항</a></li>
+                                        <li><a href="sub4.html#page2">주가정보</a></li>
+                                        <li><a href="sub4.html#page3">IR 정보</a></li>
+                                        <li><a href="sub4.html#page">공시정보</a></li>
                                     </ul>
                                 </div>
                             </li>
-                            <li><a href="">고객서비스</a>
+                            <li><a href="sub5.html">고객서비스</a>
                                 <div class="sub item5">
                                     <ul class="dp2">
-                                        <li><a href="">OVERVIEW</a></li>
-                                        <li><a href="">고객센터</a></li>
-                                        <li><a href="">공장견학</a></li>
+                                        <li><a href="sub5.html#page1">OVERVIEW</a></li>
+                                        <li><a href="sub5.html#page2">고객센터</a></li>
+                                        <li><a href="sub5.html#page2">공장견학</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -323,6 +121,51 @@
             <div class="sitemap">
                 <div class="sitemap_fr">
                     <label for="sitemap_ck" class="close_btn">닫기</label>
+                    <div id="realtedSites">
+                        <ul class="selectu1">
+                            <li class="group">농심
+                                <ul>
+                                    <li><a href="http://brand.nongshim.com/all_product/index">브랜드 전체</a></li>
+                                </ul>
+                            </li>
+                            <li class="group">스낵
+                                <ul>
+                                    <li><a href="http://brand.nongshim.com/sweetpotatosnack/main/index">고구마깡</a></li>
+                                    <li><a href="http://brand.nongshim.com/saewookkang/main/index">새우깡</a></li>
+                                    <li><a href="http://brand.nongshim.com/onionrings/main/index">양파링</a></li>
+                                </ul>
+                            </li>
+                            <li class="group">음료 / 간편식
+                                <ul>
+                                    <li><a href="http://brand.nongshim.com/baeksansoo/main/index"></a>백산수</li>
+                                    <li><a href="http://brand.nongshim.com/caprisun/main/index">카프리썬</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="http://brand.nongshim.com/frozenrice/main/index">쿡탐볶음밥</a></li>
+                                    <li><a href="http://brand.nongshim.com/CookTam_Rabokki/main/index">쿡탐라볶이</a></li>
+                                </ul>
+                            </li>
+                            <li class="group">면
+                                <ul>
+                                    <li><a href="http://brand.nongshim.com/spicyshrimp/main/index">새우탕면</a></li>
+                                    <li><a href="http://brand.nongshim.com/shinramyun/main/index">신라면</a></li>
+                                    <li><a href="http://brand.nongshim.com/beefnoodle/main/index">우육탕면</a></li>
+                                    <li><a href="http://brand.nongshim.com/udonbowl/main/index">튀김우동</a></li>
+                                    <li><a href="http://brand.nongshim.com/chapagetti/main/index">짜파게티</a></li>
+                                    <li><a href="http://brand.nongshim.com/bowlnoodle/main/index">육개장</a></li>
+                                    <li><a href="http://brand.nongshim.com/gomtang/main/index">사리곰탕면</a></li>
+                                    <li><a href="http://brand.nongshim.com/champongnoodle/main/index">오징어짬뽕</a></li>
+                                </ul>
+                            </li>
+                            <li class="group">해외브랜드
+                                <ul>
+                                    <li><a href="http://brand.nongshim.com/kellogg/main/index">켈로그</a></li>
+                                    <li><a href="http://brand.nongshim.com/housecurry/main/index">하우스카레</a></li>
+                                    <li><a href="http://brand.nongshim.com/mentos/main/index">멘토스</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </header>
@@ -356,41 +199,57 @@
                                     <li class="item1">
                                         <img src="./images/overview_management_01.png" alt="" class="pic">
                                         <div class="ban_tit_box">
-                                            <h2 class="ban_tit1"></h2>
-                                            <h2 class="ban_tit2"></h2>
-                                            <p class="ban_com"></p>
+                                            <h2 class="ban_tit1">01</h2>
+                                            <h2 class="ban_tit2">농심</h2>
+                                            <p class="ban_com">농심은 50년 넘게 고객의 곁을 지키며<br>
+                                                발전했습니다.<br>
+                                                지금도 만들어지고 있는 농심의 역사를 <br>
+                                                함께해주세요.</p>
                                         </div>
                                     </li>
                                     <li class="item2">
                                         <img src="./images/overview_management_02.png" alt="" class="pic">
                                         <div class="ban_tit_box">
-                                            <h2 class="ban_tit1"></h2>
-                                            <h2 class="ban_tit2"></h2>
-                                            <p class="ban_com"></p>
+                                            <h2 class="ban_tit1">02</h2>
+                                            <h2 class="ban_tit2">“ 이농심행 무불성사<br>
+                                                (以農心行 無不成事) ”<br></h2>
+                                            <p class="ban_com">
+                                                “농심으로 행하면 이루지 못할 것이 없다.”<br>
+                                                서둘지 말고 모든 일을 순리에 맞게 이끌어 간다면<br>
+                                                그 결실도 가장 바람직한 것이 되지 않겠는가.<br>
+                                                세상이 각박해질수록 농부의 마음을 되살려야 한다."
+                                            </p>
                                         </div>
                                     </li>
                                     <li class="item3">
                                         <img src="./images/overview_management_03.png" alt="" class="pic">
                                         <div class="ban_tit_box">
-                                            <h2 class="ban_tit1"></h2>
-                                            <h2 class="ban_tit2"></h2>
-                                            <p class="ban_com"></p>
+                                            <h2 class="ban_tit1">03</h2>
+                                            <h2 class="ban_tit2">세계속의 농심</h2>
+                                            <p class="ban_com">농심은 <br>
+                                                세계 라면 점유율 1위를 향해<br>
+                                                 달려가고 있습니다.</p>
                                         </div>
                                     </li>
                                     <li class="item4">
                                         <img src="./images/overview_management_05.png" alt="" class="pic">
                                         <div class="ban_tit_box">
-                                            <h2 class="ban_tit1"></h2>
-                                            <h2 class="ban_tit2"></h2>
-                                            <p class="ban_com"></p>
+                                            <h2 class="ban_tit1">04</h2>
+                                            <h2 class="ban_tit2">농심 그룹</h2>
+                                            <p class="ban_com">농심홀딩스 / 율촌화학 / 메가마트<br>
+                                            농심태경 / 농심기획 / 호텔농심 등이<br>
+                                            농심의 이름으로 앞을 향해 달려가고 있습니다.
+                                        </p>
                                         </div>
                                     </li>
                                     <li class="item5">
-                                        <img src="./images/overview_management_01.png" alt="" class="pic">
+                                        <img src="./images/ci_logo.jpg" alt="" class="pic">
                                         <div class="ban_tit_box">
-                                            <h2 class="ban_tit1"></h2>
-                                            <h2 class="ban_tit2"></h2>
-                                            <p class="ban_com"></p>
+                                            <h2 class="ban_tit1">05</h2>
+                                            <h2 class="ban_tit2">'농심씨드'(農心本)</h2>
+                                            <p class="ban_com">세계 최일류 기업을 추구하는 <br>
+                                                농심의 미래지향적인 이상과 의지를<br>
+                                                강하게 상징하고 있습니다.</p>
                                         </div>
                                     </li>
                                     </li>
@@ -589,9 +448,9 @@
                 <div class="ft_wrap">    
                     <nav class="fnb left">
                         <ul class="fnb_box">
-                            <li><a href="">상담접수</a></li>
+                            <li><a href="privacy.html">개인정보처리방침</a></li>
                             <li><a href="">오시는길</a></li>
-                            <li><a href="">이용약관</a></li>
+                            <li><a href="usepromotion.html">이용약관</a></li>
                             <li><a href="">특약점포탈</a></li>
                             <li><a href="">이메일주소무단수집거부</a></li>
                         </ul>
@@ -666,19 +525,9 @@
             <article class="row row3">
                 <div class="ft_wrap">
                     <div class="ft_logo left"></div>
-                    <address class="copyright right">서울특별시 동작구 여의대방로 112 (신대방동) | 사업자등록번호118-81-03914<br>대표이사이병학 | 대표전화02.820.7114 | 고객센터080.023.5181</address>
-                    <a class="info">
-                        
-                    </a>
-                    <a class="info">
-                       
-                    </a>
-                    <a class="info">
-                        
-                    </a>
-                    <a class="info">
-                        
-                    </a>
+                    <address class="copyright right">서울특별시 동작구 여의대방로 112 (신대방동)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;사업자등록번호118-81-03914&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;대표이사 이병학
+                        <br>대표전화02.820.7114&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;고객센터080.023.5181
+                    </address>
                 </div>
             </article>
         </footer>
