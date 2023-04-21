@@ -158,3 +158,4 @@ background-position: -495px -72px; float:right; margin-top:50px; margin-right:20
 .colm_fr .lst2 .item1:before { background-position: -180px -400px; }
 .colm_fr .lst2 .item2:before { background-position: -240px -400px; }
 .colm_fr .lst2 .item3:before { background-position: 0px -460px; }
+#page5 .grid4 .grid_box { display: block; padding-left: 700px; }
