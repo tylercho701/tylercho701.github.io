@@ -1,0 +1,454 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+
+
+
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+<!-- 검색 엔진 초기화 -->
+<meta name="subject">
+<meta name="keywords">
+<meta name="description">
+<meta name="author">
+
+<!-- Favorite Icon 설정 -->
+<link rel="shortcut Icon" href="">
+
+<!-- og설정 -->
+<meta name="og:site_name" content="project02_daiso">
+<meta name="og:title" content="project02_daiso">
+<meta name="og:description" content="project02_daiso">
+<!--  <meta name="og:url" content="">
+<meta name="og:image" content=""> -->
+
+<!-- 기본 폰트 및 초기화 로딩 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+<!-- 스타일 초기화 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" rel="stylesheet">
+
+<!-- Jquery CND -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<title>Purchasing Page</title>
+<link rel="stylesheet" href="/pro02/form_common.css">
+<script src="https://cdn.iamport.kr/v1/iamport.js"></script>
+<style>
+.table { border-bottom:1px solid #333; }
+</style>
+</head>
+<body>
+	<div class="container">
+		<header id="hd">
+            <nav id="tnb_1" class="navbar navbar-default" style="margin-bottom:0; padding-top:7px; padding-left:5px;">
+                <ul class="nav nav-tabs">
+                    <li><a class="navbar-brand" href="Index.html">DAISO</a></li>
+                    <li role="presentation"><a href="Notice_list.html">공지사항</a></li>
+                    
+                        <li role="presentation"><a href="UserLogin.html">로그인</a></li>
+                        <li role="presentation"><a href="terms.html">회원가입</a></li>
+                        <li role="presentation"><a href="myPage.html">마이페이지</a></li>
+                        <li role="presentation"><a href="MyBasket.html">장바구니</a></li>
+                        <li role="presentation"><a href="MySalesList.html">구매내역</a></li>
+                        <li role="presentation"><a href="QnaList.html">질문하기</a></li>
+                        <li role="presentation"><a href="FaqList.html">FAQ</a></li>
+                        <li role="presentation"><a href="AdminPage.html">관리자</a></li>
+                        <li role="presentation"><a href="/">로그아웃</a></li>
+                    
+                    
+                </ul>
+            </nav>
+            <nav id="tnb_2" class="navbar navbar-default" style="margin-bottom:0; padding-top:7px; padding-left:5px;">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        보관/정리/수납
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="ProductList.html">리빙박스(플라스틱)</a></li>
+                        <li><a href="ProductList.html">정리함</a></li>
+                        <li><a href="ProductList.html">옷걸이/행거</a></li>
+                        <li><a href="ProductList.html">공구함/약통</a></li>
+                        <li><a href="ProductList.html">서랍장/서류함</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        청소
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="ProductList.html">휴지통</a></li>
+                        <li><a href="ProductList.html">걸레/솔</a></li>
+                        <li><a href="ProductList.html">매직블럭</a></li>
+                        <li><a href="ProductList.html">롤크리너</a></li>
+                        <li><a href="ProductList.html">빗자루/쓰레받이</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        거실/잡화
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="ProductList.html">거실화/슬리퍼</a></li>
+                        <li><a href="ProductList.html">발매트</a></li>
+                        <li><a href="ProductList.html">휴지/물티슈</a></li>
+                        <li><a href="ProductList.html">우산/우비</a></li>
+                        <li><a href="ProductList.html">돗자리/생활매트</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        욕실
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="ProductList.html">비누받침/양치컵</a></li>
+                        <li><a href="ProductList.html">발매트</a></li>
+                        <li><a href="ProductList.html">변기세척</a></li>
+                        <li><a href="ProductList.html">샤워용품</a></li>
+                        <li><a href="ProductList.html">칫솔/치실</a></li>
+                    </ul>
+                </div>
+                
+            </nav>
+        </header>
+
+
+		<div class="content">
+			<div class="container-fluid">
+				<h2>제품 구매</h2>
+				<form action="/pro02/AddPayment.do" method="post" onsubmit="return payCheck(this)">
+					<h3>구매 정보</h3>
+					<table class="table">
+						<tbody>
+							<tr>
+								<th>상품명</th>
+								<td>
+									<input type="text" id="pname_dis" name="pname_dis" value="거울닦이 스펀지">
+									<input type="hidden" id="pname" name="pname" value="거울닦이 스펀지">
+									<input type="hidden" id="category" name="category" value="0203">
+									<input type="hidden" id="pcode" name="pcode" value="51719">
+									<input type="hidden" id="id" name="id" value="tyler">
+									<input type="hidden" id="uname" name="uname" value="조교행">
+									<input type="hidden" id="uemail" name="uemail" value="tyler@google.com">
+									<input type="hidden" id="utel" name="utel" value="010-1234-1234">
+									<input type="hidden" id="uaddr" name="uaddr" value="고양시 일산서구">
+									<input type="hidden" id="bnum" name="bnum" value="79658">
+								</td>
+							</tr>
+							<tr>
+								<th>상품 설명</th>
+								<td>깨끗한 거울로 만들어드려요</td>
+							</tr>
+							<tr>
+								<th>상품 가격</th>
+								<td>
+									4200
+									<input type="hidden" id="price" name="price" value="4200">
+								</td>
+							</tr>
+							<tr>
+								<th><label for="amount">수량</label></th>
+								<td>
+									구매 가능 수량 : <strong>33</strong><br>
+									<input type="number" name="amount" id="amount" value="3" min="0" max="33" title="1~500" class="form-control" required>
+								</td>
+							</tr>
+							<tr>
+								<th>상품 이미지</th>
+								<td><img src='/pro02/product/./images/51719_sub2.jpg' alt="거울닦이 스펀지" style="height:300px;" /></td>
+							</tr>
+						</tbody>
+					</table>
+					<h3>배송 정보</h3>
+					<table class="table">
+						<tbody>
+							<tr>
+								<th>배송지 주소</th>
+								<td>
+									<input type="text" name="address1" id="address1" placeholder="기본 주소 입력" class="form-control" required /><br>
+									<input type="text" name="address2" id="address2" placeholder="상세 주소 입력" class="form-control" required /><br>
+									<input type="text" name="postcode" id="postcode" style="width:160px;float:left;margin-right:20px;" placeholder="우편번호" class="form-control" required>
+									<button type="button" id="post_btn" onclick="findAddr()" class="btn btn-primary" style="margin-bottom:36px;">우편번호 검색</button>
+								</td>
+							</tr>
+							<tr>
+								<th>받는 사람 연락처</th>
+								<td>			
+									<input type="tel" name="tel" id="tel" maxlength="13" required>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<h3>결제 정보</h3>
+					<table class="table">
+						<tbody>
+							<tr>
+								<th>결제 수단</th>
+								<td>
+									<input type="hidden" name="conf" id="ptype">
+									<input type="radio" name="ptype" id="ptype1" value="신용카드" class="paytype" checked><label for="ptype1">신용카드</label> &nbsp;
+									<input type="radio" name="ptype" id="ptype2" value="체크카드" class="paytype"><label for="ptype2">체크카드</label> &nbsp;
+									<input type="radio" name="ptype" id="ptype3" value="계좌이체" class="paytype"><label for="ptype3">계좌이체</label> &nbsp;
+								</td>
+							</tr>
+							<tr>
+								<th><label for="paycom" id="paycomLb">결제사</label></th>
+								<td>			
+									<select name="paycom" id="paycom" class="form-control" required>
+										<option value="">선택안함</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th><label for="paycom" id="ptnumLb">결제 번호</label></th>
+								<td>			
+									<input type="text" name="ptnum" id="ptnum" class="form-control" required>
+									<input type="hidden" name="payamount" id="payamount">
+									<input type="hidden" name="payck" id="payck" value="no">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="btn-group">
+						<button type="button" id="pay" class="btn btn-info">결제하기</button>
+					</div>
+					<div class="btn-group">
+						<input type="submit" value="상품 구매 완료" class="btn btn-primary">
+						<a href="javascript:history.go(-1)" class="btn btn-warning">뒤로 가기</a>				
+					</div>
+				</form>
+				<script>
+				function findAddr() {
+					new daum.Postcode({
+						oncomplete: function(data) {
+							console.log(data);
+							var roadAddr = data.roadAddress;
+							var jibunAddr = data.jibunAddress;
+							document.getElementById("postcode").value = data.zonecode;
+							if(roadAddr !== '') {
+								document.getElementById("address1").value = roadAddr;				
+							} else if(jibunAddr !== ''){
+								document.getElementById("address1").value = jibunAddr;
+							}
+							document.getElementById("address2").focus();
+						}
+					}).open();
+				}
+				</script>
+				<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+				<script>
+				//결제모듈 연동
+				$(document).ready(function(){
+					var totalPay=0;
+					var proName;
+					$("#pay").click(function(){
+						proName = $("#pname").val();
+						if($("#amount").val()!="") {
+							totalPay = parseInt($("#price").val()) * parseInt($("#amount").val());
+						} else {
+							alert("구매할 수량을 입력하지 않으셨습니다.");
+							$("#amount").focus();
+							return;
+						}
+						alert("결제할 금액 : "+totalPay);
+						//상품명_현재시간
+			 			var d = new Date();
+						var date = d.getFullYear()+''+(d.getMonth()+1)+''+d.getDate()+''+d.getHours()+''+d.getMinutes()+''+d.getSeconds();
+						IMP.init('imp31083748'); // 결제 API를 사용하기 위한 코드 입력!
+						IMP.request_pay({		//결제 요청
+							merchant_uid : $("#pname").val() + '_' + date, //상점 거래 ID
+							name : $("#pname").val(),				// 결제 명
+							amount : totalPay,					// 결제금액
+							buyer_email : $("#uemail").val(), // 구매자 email
+							buyer_name : $("#uname").val(),				// 구매자 이름
+							buyer_tel : $("#utel").val(),		// 구매자 전화번호
+							buyer_addr : $("#uaddr").val(),		// 구매자 주소
+							buyer_postcode : $("#postcode").val()			// 구매자 우편번호
+							
+							//지정 가능한 속성
+							//https://docs.iamport.kr/sdk/javascript-sdk 참조
+							//pg : 결제 프로그램 코드
+							//pay_method : 결제 방법
+							//escrow : 에스크로 결제창 호출 여부
+							//merchant_uid : 상점 거래 ID
+							//name : 주문명
+							//amount : 결제 금액
+							//custom_data : 가맹점 임의 지정 데이터
+							//tax_free : 면세공급가액
+							//currency : 거래 통화
+							//language : 결제창 화면의 언어
+							//buyer_name : 주문자명
+							//buyer_tel : 주문자 연락처
+							//buyer_email : 주문자 이메일
+							//buyer_addr : 주문자 주소
+							//buyer_postcode : 주문자 우편번호
+							//display : 결제 화면 구성 설정
+							//display.card_quota : 50,000원 이상 금액 결제시 할부 개월 수 옵션
+							//digital : 결제 상품이 컨텐츠인지 여부(휴대폰 소액 결제시 필수)
+							//v_bank_due : 가상계좌 입금기한
+							//m_redirect_url : 리다이렉션 방식으로 호출된 결제창에서 결제 후 이동 될 주소
+							//app_scheme : 모바일 앱 결제 중 앱 복귀를 위한 URL
+							//biz_num : 계약된 사업자등록번호 10자리
+							
+						}, function(rsp){
+							if(rsp.success){
+								console.log(rsp);
+								var msg = '결제가 완료 되었습니다.';
+								var r1 = '고유 아이디 : ' +rsp.imp_uid;
+								var r2 = '상점 거래 아이디 : ' +rsp.merchant_uid;
+								var r3 = '결제 금액 : ' +rsp.paid_amount;
+								var r4 = '카드 승인 번호 : '+rsp.apply_num;
+								
+								//반환 가능한 속성
+								//https://docs.iamport.kr/sdk/javascript-sdk 참조
+								//rsp.success : 결제 성공 여부
+								//rsp.error_code : 결제 실패시 에러 코드
+								//rsp.error_msg : 결제 실패시 에러 메시지
+								//rsp.imp_uid : 아임포트 고유 결제번호
+								//rsp.merchant_uid : 가맹점 고유 주문번호
+								//rsp.pay_method : 결제 방법
+								//rsp.paid_amount : 결제 금액
+								//rsp.status : 결제 상태
+								//rsp.name : 주문명
+								//rsp.pg_provider : 일반 결제 승인된 PG사
+								//rsp.emb_pg_provider : 간편 결제 승인된 PG사 
+								//rsp.pg_tid : PG사 거래고유번호
+								//rsp.buyer_name : 주문자 이름
+								//rsp.buyer_email : 주문자 Email
+								//rsp.buyer_tel : 주문자 연락처
+								//rsp.buyer_addr : 주문자 주소
+								//rsp.buyer_postcode : 주문자 우편번호
+								//rsp.custom_data : 가맹점 임의 지정 데이터
+								//rsp.paid_at : 결제승인시각
+								//rsp.receipt_url : PG사에서 발행되는 거래 매출전표 URL
+								//rsp.apply_num : 카드사 승인번호
+								//rsp.vbank_num : 가상계좌 입금계좌번호
+								//rsp.vbank_name : 가상계좌 은행명
+								//rsp.vbank_holder : 가상계좌 예금주
+								//rsp.vbank_date : 가상계좌 입금기한
+								
+								/* 아래 내용은 각주 처리 해제 */
+								//$("#payck").val("yes");
+								//$("#payamount").val(rsp.paid_amount);
+								//$("#paymethod").val(rsp.pay_method);
+								//$("#paycom").val(rsp.pg_provider);
+								//$("#ptnum").val(rsp.apply_num);
+								//alert(msg);
+								//$("#paymentResult").html(r1+"<br>"+r2+"<br>"+r3+"<br>"+r4);
+							} else{
+								//$("#paymentResult").html('결제실패<br>'+'에러내용 : ' +rsp.error_msg);
+							}
+							//테스트용이므로 실패시에도 그냥 통과시킴 그러므로 실제 사용시에는 아래 내용은 각주 처리하든지 지워야함
+							$("#payck").val("yes");
+							$("#payamount").val(totalPay);
+							//$("#ptype").val("카드");
+							//$("#paycom").val("삼성카드");
+							//$("#ptnum").val("123-1234-1234-1278");
+						});
+			 		});
+				});
+				</script>
+				<script>
+				$(document).ready(function(){
+					var card = ["BC카드", "KB국민카드", "삼성카드", "신한카드", "우리카드", "하나카드", "롯데카드", "현대카드", "NH농협카드"];
+					var bank = ["IBK기업은행", "하나은행", "농협은행", "우리은행", "우체국", "새마을금고", "신협", "한국씨티은행", "수협은행", "대구은행", "부산은행", "케이뱅크", "토스뱅크", "카카오뱅크"];
+					$("input[name='ptype']").change(function(){
+						// 신용카드 결제 선택 시.
+						if($("#ptype1:checked").val() == '신용카드'){
+							$("#ptype").val("신용카드");
+							$('#paycomLb').text("신용카드사 또는 종류");
+							$('#ptnumLb').text("신용카드번호");
+							$("#paycom").empty();
+							$("#paycom").append("<option value=''>선택안함</option>");
+							for(var key in card){
+								$("#paycom").append("<option value='"+card[key]+"'>"+card[key]+"</option>");
+							}
+							$('#ptnum').val("");
+						}	
+						// 체크카드 결제 선택 시.
+						else if($("#ptype2:checked").val() == '체크카드'){
+							$("#ptype").val("체크카드");
+							$('#paycomLb').text("체크카드사 또는 종류");
+							$('#ptnumLb').text("체크카드번호");
+							$("#paycom").empty();
+							$("#paycom").append("<option value=''>선택안함</option>");
+							for(var key in card){
+								$("#paycom").append("<option value='"+card[key]+"'>"+card[key]+"</option>");
+							}
+							$('#ptnum').val("");
+						}
+						// 계좌이체 결제 선택 시.
+						else if($("#ptype3:checked").val() == '계좌이체'){
+							$("#ptype").val("계좌이체");
+							$('#paycomLb').html("입금 은행 : 우리은행<br> 예금주 : 다이소");
+							$('#ptnumLb').html("계좌 번호 :<br> 192-438-49834");
+							$("#paycom").empty();
+							$("#paycom").append("<option value=''>선택안함</option>");
+							for(var key in bank){
+								$("#paycom").append("<option value='"+bank[key]+"'>"+bank[key]+"</option>");
+							}
+							$('#ptnum').val("");
+						}
+					}).change();
+					
+					$("#pay").click(function(){
+						console.log($("#ptype").val());
+						console.log($("#paycom").val());
+						console.log($("#ptnum").val());
+						$("#paymentResult").html($("#ptype").val()+"<br>"+$("#paycom").val()+"<br>"+$("#ptnum").val());
+					});
+				});
+				function payCheck(f){
+					var payCk = f.payck.value;
+					if(payCk!="yes"){
+						alert("아직 결제 전 입니다.");
+						return;
+					}
+				}
+				</script>
+				<div id="paymentResult"></div>
+			</div>
+		</div>
+		
+
+
+
+<footer id="ft">
+	<nav class="navbar navbar-default">
+		<address>(주)한웰이쇼핑 l 대표이사 : 김기호 l 사업장소재지: 서울특별시 강남구 양재천로 167 아성빌딩 5F.
+사업자등록번호 : 220-87-69701 | 통신판매업신고 : 2008-서울강남-1823 | 의료기기 판매업 신고번호 : 제 5664호
+개인정보보호책임자 : 이상구 | 호스팅제공자 : (주)한웰이쇼핑
+고객센터 : 1688-5700 l 팩스 : 02.573.8513 | Mail : help@daisomall.co.kr
+		</address>
+	</nav>
+</footer>
+	</div>
+</body>
+</html>

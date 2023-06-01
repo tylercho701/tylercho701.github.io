@@ -1,0 +1,186 @@
+
+
+
+
+
+  
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+
+
+
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+<!-- 검색 엔진 초기화 -->
+<meta name="subject">
+<meta name="keywords">
+<meta name="description">
+<meta name="author">
+
+<!-- Favorite Icon 설정 -->
+<link rel="shortcut Icon" href="">
+
+<!-- og설정 -->
+<meta name="og:site_name" content="project02_daiso">
+<meta name="og:title" content="project02_daiso">
+<meta name="og:description" content="project02_daiso">
+<!--  <meta name="og:url" content="">
+<meta name="og:image" content=""> -->
+
+<!-- 기본 폰트 및 초기화 로딩 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+<!-- 스타일 초기화 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" rel="stylesheet">
+
+<!-- Jquery CND -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<title>질문 하기</title>
+<link rel="stylesheet" href="/pro02/form_common.css">
+<style>
+</style>
+</head>
+<body>
+	<div class="container">
+		<header id="hd">
+            <nav id="tnb_1" class="navbar navbar-default" style="margin-bottom:0; padding-top:7px; padding-left:5px;">
+                <ul class="nav nav-tabs">
+                    <li><a class="navbar-brand" href="Index.html">DAISO</a></li>
+                    <li role="presentation"><a href="Notice_list.html">공지사항</a></li>
+                    
+                        <li role="presentation"><a href="UserLogin.html">로그인</a></li>
+                        <li role="presentation"><a href="terms.html">회원가입</a></li>
+                        <li role="presentation"><a href="myPage.html">마이페이지</a></li>
+                        <li role="presentation"><a href="MyBasket.html">장바구니</a></li>
+                        <li role="presentation"><a href="MySalesList.html">구매내역</a></li>
+                        <li role="presentation"><a href="QnaList.html">질문하기</a></li>
+                        <li role="presentation"><a href="FaqList.html">FAQ</a></li>
+                        <li role="presentation"><a href="AdminPage.html">관리자</a></li>
+                        <li role="presentation"><a href="/">로그아웃</a></li>
+                    
+                    
+                </ul>
+            </nav>
+            <nav id="tnb_2" class="navbar navbar-default" style="margin-bottom:0; padding-top:7px; padding-left:5px;">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        보관/정리/수납
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="ProductList.html">리빙박스(플라스틱)</a></li>
+                        <li><a href="ProductList.html">정리함</a></li>
+                        <li><a href="ProductList.html">옷걸이/행거</a></li>
+                        <li><a href="ProductList.html">공구함/약통</a></li>
+                        <li><a href="ProductList.html">서랍장/서류함</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        청소
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="ProductList.html">휴지통</a></li>
+                        <li><a href="ProductList.html">걸레/솔</a></li>
+                        <li><a href="ProductList.html">매직블럭</a></li>
+                        <li><a href="ProductList.html">롤크리너</a></li>
+                        <li><a href="ProductList.html">빗자루/쓰레받이</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        거실/잡화
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="ProductList.html">거실화/슬리퍼</a></li>
+                        <li><a href="ProductList.html">발매트</a></li>
+                        <li><a href="ProductList.html">휴지/물티슈</a></li>
+                        <li><a href="ProductList.html">우산/우비</a></li>
+                        <li><a href="ProductList.html">돗자리/생활매트</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        욕실
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="ProductList.html">비누받침/양치컵</a></li>
+                        <li><a href="ProductList.html">발매트</a></li>
+                        <li><a href="ProductList.html">변기세척</a></li>
+                        <li><a href="ProductList.html">샤워용품</a></li>
+                        <li><a href="ProductList.html">칫솔/치실</a></li>
+                    </ul>
+                </div>
+                
+            </nav>
+        </header>
+		<div class="content">
+			<div class="container-fluid">
+				<h2>질문 글 쓰기</h2>
+				<p>질문을 시작합니다.</p>
+				<form action="/pro02/AddQnaPro.do" method="post">
+					<table class="table">
+						<tbody>
+							<tr>
+								<th><label for="title">질문 제목</label></th>
+								<td>
+									<input type="hidden" name="lev" id="lev" value="1">
+									<input type="hidden" name="author" id="author" value="admin">
+									<input type="text" name="title" id="title" maxlength="98" title="100자 내로 작성" placeholder="100자 내로 작성" class="form-control" required autofocus>
+								</td>
+							</tr>
+							<tr>
+								<th><label for="content">질문 내용</label></th>
+								<td>
+									<textarea rows="10" cols="100" name="content" id="content" maxlength="990" title="1000자 내로 작성" class="form-control"></textarea>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<input type="submit" value="글쓰기" class="btn btn-primary">
+									<a href="/pro02/QnaList.do" class="btn btn-primary">글 목록</a>				
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</form>		
+			</div>
+		</div>
+		
+
+
+
+<footer id="ft">
+	<nav class="navbar navbar-default">
+		<address>(주)한웰이쇼핑 l 대표이사 : 김기호 l 사업장소재지: 서울특별시 강남구 양재천로 167 아성빌딩 5F.
+사업자등록번호 : 220-87-69701 | 통신판매업신고 : 2008-서울강남-1823 | 의료기기 판매업 신고번호 : 제 5664호
+개인정보보호책임자 : 이상구 | 호스팅제공자 : (주)한웰이쇼핑
+고객센터 : 1688-5700 l 팩스 : 02.573.8513 | Mail : help@daisomall.co.kr
+		</address>
+	</nav>
+</footer>
+	</div>
+</body>
+</html>
